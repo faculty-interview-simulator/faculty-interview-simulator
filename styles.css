@@ -217,6 +217,9 @@ p {
 }
 
 .practice-card {
+  display: grid;
+  grid-template-rows: auto minmax(420px, 1fr) auto;
+  min-height: 610px;
   overflow: hidden;
 }
 
@@ -277,8 +280,10 @@ p {
 .question-panel {
   border: 1px solid var(--line);
   border-radius: 9px;
+  display: grid;
+  grid-template-rows: auto auto auto minmax(0, 1fr) auto;
   margin: 18px 22px;
-  min-height: 330px;
+  min-height: 0;
   padding: 24px;
 }
 
@@ -345,7 +350,7 @@ p {
 .answer-angle ul {
   color: #343b46;
   line-height: 1.5;
-  margin-bottom: 18px;
+  margin-bottom: 0;
   padding-left: 20px;
 }
 
@@ -775,6 +780,16 @@ p {
   .session-bar,
   .practice-controls {
     grid-template-columns: 1fr;
+  }
+
+  .practice-card {
+    display: block;
+    min-height: 0;
+  }
+
+  .question-panel {
+    display: block;
+    min-height: 330px;
   }
 
   .question-panel h2 {
