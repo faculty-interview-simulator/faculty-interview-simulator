@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Faculty Interview Online System: a free 30-question web practice set with a waitlist for the full desktop client.">
+  <title>Faculty Interview Online System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="practice">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Faculty Interview Online System">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span>
+        <strong>Faculty Interview Online System</strong>
+        <small>30-question web practice</small>
+      </span>
+    </a>
+    <nav class="top-actions" aria-label="Primary navigation">
+      <a class="button button-ghost" href="#practice">Practice</a>
+      <a class="button button-warm" href="waitlist.html">Join Full Version Waitlist</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero-strip" aria-label="Free web practice">
+      <div>
+        <p class="eyebrow">Free web version</p>
+        <h1>Practice 30 curated faculty interview questions.</h1>
+        <p>Balanced across research, teaching, funding, mentoring, diversity, fit, collaboration, service, and hard questions.</p>
+      </div>
+      <a class="button button-warm" href="waitlist.html">Unlock full client later</a>
+    </section>
+
+    <section id="practice" class="practice-layout">
+      <section class="practice-card" aria-label="Current practice question">
+        <div class="session-bar">
+          <div class="metric progress-metric">
+            <span>Progress</span>
+            <strong id="progressText">1 / 30</strong>
+            <div class="progress-track" aria-hidden="true">
+              <div id="progressFill" class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="metric">
+            <span>Question Time</span>
+            <strong id="timerText">00:00</strong>
+          </div>
+          <div class="metric">
+            <span>Marked</span>
+            <strong id="markedCount">0</strong>
+          </div>
+        </div>
+
+        <article class="question-panel">
+          <div class="question-meta">
+            <span id="questionNumber">Question 1</span>
+            <span id="questionId">Q01</span>
+          </div>
+          <h2 id="questionText"></h2>
+          <p id="questionNote" class="question-note" hidden></p>
+          <div id="tagList" class="tag-list" aria-label="Question categories"></div>
+          <div class="answer-angle">
+            <h3>Answer angle</h3>
+            <ul id="answerAngleList"></ul>
+          </div>
+          <div class="question-footer">
+            <span id="remainingText">29 remaining</span>
+            <span>No login. No answer storage.</span>
+          </div>
+        </article>
+
+        <div class="practice-controls">
+          <button id="reviewButton" class="button button-outline" type="button">Mark for Review</button>
+          <button id="resetButton" class="button button-secondary" type="button">Reset Session</button>
+          <button id="nextButton" class="button button-primary" type="button">Next Question</button>
+        </div>
+      </section>
+
+      <aside class="side-stack" aria-label="Practice details">
+        <section class="side-card">
+          <h2>Category Distribution</h2>
+          <div id="distributionList" class="distribution-list"></div>
+        </section>
+
+        <section class="side-card">
+          <h2>Marked Questions</h2>
+          <div id="markedList" class="marked-list">No questions marked yet.</div>
+        </section>
+
+        <section class="side-card full-card">
+          <p class="eyebrow">Full desktop client</p>
+          <h2>Need the full 198-question toolkit?</h2>
+          <p>Join the waitlist for the Mac and Windows client with the full question bank, saved progress, searchable library, and timed mock mode.</p>
+          <a class="button button-warm full-width" href="waitlist.html">Join Waitlist</a>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer-note">
+    Independent preparation tool. Not affiliated with any university, department, hiring committee, or search committee.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
