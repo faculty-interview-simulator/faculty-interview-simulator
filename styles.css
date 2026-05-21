@@ -79,7 +79,30 @@ select {
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.18);
 }
 
+.seo-hero {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-bottom: 18px;
+  padding: 22px 26px;
+}
 
+.seo-hero h1 {
+  font-size: clamp(28px, 3.2vw, 44px);
+  letter-spacing: -0.055em;
+  line-height: 1.05;
+  margin: 0 0 10px;
+  max-width: 920px;
+}
+
+.seo-hero p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 880px;
+}
 
 .brand strong {
   display: block;
@@ -827,5 +850,67 @@ p {
 
   .early-access-band {
     padding: 22px;
+  }
+}
+
+.faq-section {
+  margin-top: 34px;
+}
+
+.faq-header {
+  margin: 0 auto 18px;
+  max-width: 760px;
+  text-align: center;
+}
+
+.faq-header h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  letter-spacing: -0.055em;
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.faq-header p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+.faq-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.faq-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #edf1f5;
+  border-radius: 12px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+  padding: 22px;
+}
+
+.faq-card h3 {
+  font-size: 19px;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.faq-card p {
+  color: #344155;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-header {
+    text-align: left;
   }
 }

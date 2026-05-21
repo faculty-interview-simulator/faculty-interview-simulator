@@ -3,34 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Faculty Interview Online System: a free 30-question web practice set with a waitlist for the full desktop client.">
-  <title>Faculty Interview Online System</title>
+
+  <title>Faculty Interview Practice Software | Academic Interview Client</title>
+  <meta name="description" content="Faculty interview practice software for PhD students, postdocs, lecturers, and assistant professor candidates. Practice academic interview questions with timed sessions, answer angles, question banks, and local progress tracking.">
+  <link rel="canonical" href="https://facultyinterview.app/">
+
+  <meta property="og:title" content="Faculty Interview Practice Software">
+  <meta property="og:description" content="Practice faculty interview questions with timed sessions, answer angles, question banks, and local progress tracking.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://facultyinterview.app/">
+  <meta property="og:image" content="https://facultyinterview.app/preview.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Faculty Interview Practice Software">
+  <meta name="twitter:description" content="Academic interview preparation software for PhD students, postdocs, lecturers, and assistant professor candidates.">
+  <meta name="twitter:image" content="https://facultyinterview.app/preview.png">
+
   <link rel="stylesheet" href="styles.css">
+
   <link rel="icon" href="favicon_io/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
   <link rel="manifest" href="favicon_io/site.webmanifest">
   <meta name="theme-color" content="#07111e">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Faculty Interview Client",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web, macOS, Windows",
+    "description": "Faculty interview practice software for academic job candidates, including timed practice sessions, interview questions, answer angles, and local progress tracking.",
+    "url": "https://facultyinterview.app/",
+    "offers": {
+      "@type": "Offer",
+      "price": "19.90",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M27YB79J05"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M27YB79J05');
+  </script>
 </head>
+
 <body data-page="practice">
   <header class="topbar">
     <a class="brand" href="index.html" aria-label="Faculty Interview Online System">
       <span class="brand-mark">FI</span>
       <span>
         <strong>Faculty Interview Online System</strong>
-        <small>30-question web practice</small>
+        <small>30 question web practice</small>
       </span>
     </a>
+
     <nav class="top-actions" aria-label="Primary navigation">
       <a class="button button-ghost" href="#practice">Practice</a>
-      <a class="button button-warm" href="waitlist.html">Join Full Version Waitlist</a>
+      <a
+        class="button button-warm"
+        onclick="gtag('event', 'join_waitlist_click', { event_category: 'waitlist', event_label: 'top_navigation' });"
+        href="waitlist.html"
+      >
+        Join Full Version Waitlist
+      </a>
     </nav>
   </header>
 
   <main class="page-shell">
-
-
     <section id="practice" class="practice-layout">
       <section class="practice-card" aria-label="Current practice question">
         <div class="session-bar">
@@ -41,10 +87,12 @@
               <div id="progressFill" class="progress-fill"></div>
             </div>
           </div>
+
           <div class="metric">
             <span>Question Time</span>
             <strong id="timerText">00:00</strong>
           </div>
+
           <div class="metric">
             <span>Marked</span>
             <strong id="markedCount">0</strong>
@@ -56,13 +104,18 @@
             <span id="questionNumber">Question 1</span>
             <span id="questionId">Q01</span>
           </div>
-          <h2 id="questionText"></h2>
+
+          <h1 id="questionText">Faculty Interview Practice Software for Academic Job Candidates</h1>
+
           <p id="questionNote" class="question-note" hidden></p>
+
           <div id="tagList" class="tag-list" aria-label="Question categories"></div>
+
           <div class="answer-angle">
-            <h3>Answer angle</h3>
+            <h2>Answer angle</h2>
             <ul id="answerAngleList"></ul>
           </div>
+
           <div class="question-footer">
             <span id="remainingText">29 remaining</span>
             <span>No login. No answer storage.</span>
@@ -89,12 +142,22 @@
 
         <section class="side-card full-card">
           <p class="eyebrow">Full desktop client</p>
-          <h2>Need the full 200+ questions toolkit?</h2>
-          <p>Join the waitlist for the Mac, Windows, Linux client with the full question bank, saved progress, searchable library, and timed mock mode.</p>
-          <a class="button button-warm full-width" href="waitlist.html">Join Waitlist</a>
+          <h2>Need the full 200 plus questions toolkit?</h2>
+          <p>
+            Join the waitlist for the Mac, Windows, and Linux client with the full question bank, saved progress, searchable library, and timed mock mode.
+          </p>
+          <a
+            class="button button-warm full-width"
+            onclick="gtag('event', 'join_waitlist_click', { event_category: 'waitlist', event_label: 'side_card' });"
+            href="waitlist.html"
+          >
+            Join Waitlist
+          </a>
         </section>
       </aside>
     </section>
+
+    
   </main>
 
   <footer class="footer-note">
