@@ -715,6 +715,78 @@ p {
   margin: 0;
 }
 
+.product-preview-section {
+  margin-top: 30px;
+}
+
+.preview-copy {
+  align-items: end;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 0.75fr) minmax(280px, 0.55fr);
+  margin-bottom: 18px;
+}
+
+.preview-copy h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  letter-spacing: -0.055em;
+  margin: 0;
+}
+
+.preview-copy p {
+  color: #344155;
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.preview-showcase {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+}
+
+.preview-showcase figure {
+  margin: 0;
+}
+
+.preview-main,
+.preview-thumbs figure {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #edf1f5;
+  border-radius: 14px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.10);
+  overflow: hidden;
+}
+
+.preview-main img,
+.preview-thumbs img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.preview-main figcaption,
+.preview-thumbs figcaption {
+  color: #344155;
+  font-weight: 850;
+  padding: 14px 18px 16px;
+}
+
+.preview-thumbs {
+  display: grid;
+  gap: 14px;
+}
+
+.preview-thumbs figure {
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.preview-thumbs figcaption {
+  font-size: 14px;
+  padding: 10px 14px 12px;
+}
+
 .early-access-band {
   align-items: center;
   background: linear-gradient(135deg, #fffaf0, #fff6e7);
@@ -777,6 +849,8 @@ p {
   }
 
   .waitlist-feature-grid,
+  .preview-copy,
+  .preview-showcase,
   .early-access-band {
     grid-template-columns: 1fr;
   }

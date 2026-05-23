@@ -309,7 +309,7 @@ function renderComplete() {
   $("#answerAngleList").replaceChildren(...[
     "Review any marked questions.",
     "Reset the session for another shuffled run.",
-    "Join the waitlist if you want the full desktop client."
+    "Preview the full version if you want the complete simulator."
   ].map((text) => {
     const li = document.createElement("li");
     li.textContent = text;
